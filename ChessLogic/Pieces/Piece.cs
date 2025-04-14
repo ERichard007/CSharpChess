@@ -1,0 +1,12 @@
+﻿namespace ChessLogic
+{
+    public abstract class Piece
+    {
+        public abstract PieceType Type { get; }
+        public abstract Player Color { get; }
+        public bool hasMoved { get; set; } = false;
+
+        public abstract Piece Copy();
+
+    }
+}

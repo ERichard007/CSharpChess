@@ -5,10 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChessUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
-    <Grid>
+        Title="Chess Game" Height="1067" Width="1619"
+        WindowStartupLocation="CenterScreen"
+        Background="Black">
+
+    <Grid x:Name="Grass" RenderOptions.BitmapScalingMode="HighQuality">
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/Board.png"/>
+            <ImageBrush ImageSource="Assets/Grass.png" TileMode="Tile" Viewport="0,0,0.5,.5" ViewportUnits="RelativeToBoundingBox"/>
         </Grid.Background>
+
+
+        <Viewbox>
+            <Grid x:Name="WoodenTable" Width="1000" Height="1000" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.Effect>
+                    <DropShadowEffect Direction="360" RenderingBias="Quality" BlurRadius="100" Color="#FF151414" ShadowDepth="40" Opacity="0.55"></DropShadowEffect>
+                </Grid.Effect>
+
+                <Grid.Background>
+                    <ImageBrush ImageSource="Assets/TableWood.png"/>
+                </Grid.Background>
+
+                <Grid x:Name="BoardGrid" Width="600" Height="600" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid.Effect>
+                        <DropShadowEffect Direction="360" RenderingBias="Quality" BlurRadius="30" Color="#FF151414" ShadowDepth="20" Opacity="0.55"></DropShadowEffect>
+                    </Grid.Effect>
+
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Assets/Board.png"/>
+                    </Grid.Background>
+
+                    <UniformGrid x:Name="PieceGrid" Rows="8" Columns="8" Margin="10,0,10,10" RenderOptions.BitmapScalingMode="HighQuality"/>
+
+                    <Rectangle>
+                        <Rectangle.Fill>
+                            <RadialGradientBrush Center="0.5,0.5" GradientOrigin="-1,-2" RadiusX="1" RadiusY="0.5" Opacity="0.9">
+                                <GradientStop Color="White" Offset="0.6"/>
+                                <GradientStop Color="#33FFFFFF" Offset="0.75"/>
+                            </RadialGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                </Grid>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Window>

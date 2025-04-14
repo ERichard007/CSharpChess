@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\board.png" />
     <None Remove="Assets\B_Bishop.png" />
     <None Remove="Assets\B_King.png" />
     <None Remove="Assets\B_Knight.png" />
@@ -16,6 +17,8 @@
     <None Remove="Assets\B_Queen.png" />
     <None Remove="Assets\B_Rook.png" />
     <None Remove="Assets\cursor.png" />
+    <None Remove="Assets\Grass.png" />
+    <None Remove="Assets\TableWood.png" />
     <None Remove="Assets\W_Bishop.png" />
     <None Remove="Assets\W_King.png" />
     <None Remove="Assets\W_Knight.png" />
@@ -37,12 +40,17 @@
     <Resource Include="Assets\B_Queen.png" />
     <Resource Include="Assets\B_Rook.png" />
     <Resource Include="Assets\cursor.png" />
+    <Resource Include="Assets\Grass.png" />
     <Resource Include="Assets\W_Bishop.png" />
     <Resource Include="Assets\W_King.png" />
     <Resource Include="Assets\W_Knight.png" />
     <Resource Include="Assets\W_Pawn.png" />
     <Resource Include="Assets\W_Queen.png" />
     <Resource Include="Assets\W_Rook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\TableWood.png" />
   </ItemGroup>
 
 </Project>
